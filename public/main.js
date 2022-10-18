@@ -85,20 +85,20 @@ function getReqParam(name) {
 //     alert('Kopyalandı');
 // }
 
-function copyCode() {
-    const origin = document.location.origin + '?srcLink=';
-    const code = `const audio = document.querySelector('audio');\
-    const src = audio.currentSrc;\
-    window.open('${origin}' + src);`;
+// function copyCode() {
+//     const origin = document.location.origin + '?srcLink=';
+//     const code = `const audio = document.querySelector('audio');\
+//     const src = audio.currentSrc;\
+//     window.open('${origin}' + src);`;
 
-    var copyText = document.getElementById("copy-my-contents");
-    copyText.innerHTML = code;
-    var range = document.createRange();
-    var selection = window.getSelection();
-    range.selectNodeContents(copyText);  
-    selection.removeAllRanges();
-    selection.addRange(range);
-    document.execCommand("copy");
+//     var copyText = document.getElementById("copy-my-contents");
+//     copyText.innerHTML = code;
+//     var range = document.createRange();
+//     var selection = window.getSelection();
+//     range.selectNodeContents(copyText);  
+//     selection.removeAllRanges();
+//     selection.addRange(range);
+//     document.execCommand("copy");
 
-    alert('Kopyalandı');
-  }
+//     alert('Kopyalandı');
+//   }
