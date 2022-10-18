@@ -80,30 +80,11 @@ function copyCode() {
     const code = `const audio = document.querySelector('audio');\
     const src = audio.currentSrc;\
     window.open('${origin}' + src);`;
-    alert('Kopyalandı');
     async function copyOperation(text) {
         await navigator.clipboard.writeText(text)
-        alert('Copy Success!')
+        alert('Kopyalandı. Dersin ses kaydını açtığınız ekranda konsola yapıştırıp enter\'layın!')
     }
     
     
     setTimeout(() => { copyOperation(code) }, 1000)
 }
-
-// function copyCode() {
-//     const origin = document.location.origin + '?srcLink=';
-//     const code = `const audio = document.querySelector('audio');\
-//     const src = audio.currentSrc;\
-//     window.open('${origin}' + src);`;
-
-//     var copyText = document.getElementById("copy-my-contents");
-//     copyText.innerHTML = code;
-//     var range = document.createRange();
-//     var selection = window.getSelection();
-//     range.selectNodeContents(copyText);  
-//     selection.removeAllRanges();
-//     selection.addRange(range);
-//     document.execCommand("copy");
-
-//     alert('Kopyalandı');
-//   }
