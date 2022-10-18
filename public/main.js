@@ -77,8 +77,8 @@ function getReqParam(name) {
 
 function copyCode() {
     const origin = document.location.origin + '?srcLink=';
-    const code = `const audio = document.querySelector('audio');\
-    const src = audio.currentSrc;\
+    const code = `var all = document.querySelectorAll('audio');\
+    var src = Array.from(all).filter(item => item.currentSrc)[0].currentSrc;\
     window.open('${origin}' + src);`;
     async function copyOperation(text) {
         await navigator.clipboard.writeText(text)
