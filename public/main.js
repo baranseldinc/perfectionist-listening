@@ -80,9 +80,14 @@ function copyCode() {
     const code = `const audio = document.querySelector('audio');\
     const src = audio.currentSrc;\
     window.open('${origin}' + src);`;
-
-    navigator.clipboard.writeText(code);
     alert('Kopyalandı');
+    async function copyOperation(text) {
+        await navigator.clipboard.writeText(text)
+        alert('Copy Success!')
+    }
+    
+    
+    setTimeout(() => { copyOperation(code) }, 1000)
 }
 
 // function copyCode() {
