@@ -75,15 +75,15 @@ function getReqParam(name) {
         return decodeURIComponent(name[1]);
 }
 
-// function copyCode() {
-//     const origin = document.location.origin + '?srcLink=';
-//     const code = `const audio = document.querySelector('audio');\
-//     const src = audio.currentSrc;\
-//     window.open('${origin}' + src);`;
+function copyCode() {
+    const origin = document.location.origin + '?srcLink=';
+    const code = `const audio = document.querySelector('audio');\
+    const src = audio.currentSrc;\
+    window.open('${origin}' + src);`;
 
-//     navigator.clipboard.writeText(code);
-//     alert('Kopyalandı');
-// }
+    navigator.clipboard.writeText(code);
+    alert('Kopyalandı');
+}
 
 // function copyCode() {
 //     const origin = document.location.origin + '?srcLink=';
