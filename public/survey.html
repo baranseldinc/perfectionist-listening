@@ -34,10 +34,10 @@
             align-items: baseline;
         }
 
-        /* .day-box:hover {
-            --background-color: #9f93228f;
+        .day-box:hover {
+            background-color: #9f93228f;
             transition: 0.5s;
-        } */
+        }
 
         .hour-box {
             width: calc(82vw/7);
@@ -62,6 +62,17 @@
 
         .bg-selected {
             background-color: #9f9322d6;
+        }
+
+        @media only screen and (hover: none) and (pointer: coarse) {
+            .hour-box:hover {
+                background-color: unset;
+            }
+
+            .day-box:hover {
+                background-color: unset;
+                transition: unset;
+            }
         }
     </style>
 </head>
