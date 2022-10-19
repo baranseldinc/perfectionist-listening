@@ -79,7 +79,7 @@ function getReqParam(name) {
 function copyCode() {
     const origin = document.location.origin + '?srcLink=';
     const code = `var all = document.querySelectorAll('audio');\
-    var audio = Array.from(all).filter(item => item.currentSrc)[0]\
+    var audio = Array.from(all).filter(item => item.currentSrc)[0];\
     var src = audio.currentSrc;\
     audio.pause();\
     window.open('${origin}' + src);`;
