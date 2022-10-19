@@ -56,28 +56,16 @@
             border-bottom: 1px solid #ccc;
         }
 
-        /* .hour-box:hover {
-            background-color: #9f93228f;
-        } */
-
-        .bg-selected {
-            background-color: #9f9322d6;
+        #user-info {
+            position: absolute;
+            top:6px;
+            right: 6px;
         }
-
-        /* @media only screen and (hover: none) and (pointer: coarse) {
-            .hour-box:hover {
-                background-color: unset;
-            }
-
-            .day-box:hover {
-                background-color: unset;
-                transition: unset;
-            }
-        } */
     </style>
 </head>
 
 <body>
+    <!-- <b id="user-info"></b> -->
     <div class="main-wrapper">
         <h3>Perfectionist 194. Dönem Salı 19.00 Grubu</h3>
         <p class="text-muted">Herkese uygun bir saati en demokratik ve teknolojik çözümlerle
@@ -86,7 +74,7 @@
 
         <div class="availability-table-header">
             <h6>Uygunluk Tablosu</h6>
-            <button class="btn btn-success btn-sm">Gönder</button>
+            <button class="btn btn-success btn-sm" onclick="kaydet()">Kaydet</button>
         </div>
         <div class="availability-table">
             <div class="day-box" data-value="pazartesi">
@@ -182,6 +170,7 @@
             </div>
         </div>
     </div>
+    <script src="persistence.js" type="module"></script>
     <script src="survey.js"></script>
 </body>
 
