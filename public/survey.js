@@ -40,6 +40,9 @@ setTimeout(() => {
         window.persistence.getUserData(username, data => {
             window.userData = data;
             selectedHours = data.response;
+            document.getElementById('user-info').innerText = username;
+            if (selectedHours.length > 0)
+                document.querySelector('button').innerText = 'Güncelle';
             renderTable();
         }, error => {
             alert(username + ' kullanıcısına ait veriler sunucudan alınamadı.');
