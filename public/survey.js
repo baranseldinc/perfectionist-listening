@@ -1,3 +1,4 @@
+const selectedHours = [];
 const allHours = document.querySelectorAll('.hour-box');
 const shortDays = {
     pazartesi: 'Pzt',
@@ -19,6 +20,17 @@ Array.from(allHours).forEach(hour => {
 
     hour.addEventListener('click', e => {
         hour.classList.toggle('bg-selected');
-        console.log(value, parentValue);
+        const data = parentValue + '#' + value;
+        const indexOf = selectedHours.indexOf(data)
+        if (hour.classList.contains('bg-selected')) {
+            if (indexOf === -1) {
+                selectedHours.push(data);
+            }
+        } else {
+            if (indexOf > -1) {
+                selectedHours.splice(indexOf, 1);
+            }
+        }
+        console.log(selectedHours);
     });
 })

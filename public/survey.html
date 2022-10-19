@@ -22,9 +22,16 @@
             flex-direction: column;
         }
 
-        .availability-status {
+        .availability-table {
             display: flex;
             flex-direction: row;
+        }
+
+        .availability-table-header {
+            display: flex;
+            width: calc(82vw);
+            justify-content: space-between;
+            align-items: baseline;
         }
 
         .day-box:hover {
@@ -65,8 +72,12 @@
         <p class="text-muted">Herkese uygun bir saati en demokratik ve teknolojik çözümlerle
             yakalamaya çalışıyoruz. (availability-status)</p>
 
-        <h6>Uygunluk Durumu</h6>
-        <div class="availability-status">
+
+        <div class="availability-table-header">
+            <h6>Uygunluk Tablosu</h6>
+            <button class="btn btn-success btn-sm">Gönder</button>
+        </div>
+        <div class="availability-table">
             <div class="day-box" data-value="pazartesi">
                 <div class="hour-box" data-value="11.00"></div>
                 <div class="hour-box" data-value="12.00"></div>
