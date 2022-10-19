@@ -31,7 +31,6 @@ Array.from(allHours).forEach(hour => {
                 selectedHours.splice(indexOf, 1);
             }
         }
-        console.log(selectedHours);
     });
 })
 const username = localStorage.getItem('username');
