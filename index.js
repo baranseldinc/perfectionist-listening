@@ -21,5 +21,9 @@ app.get('/survey.js', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/survey.js'));
 });
 
+app.get('/persistence.js', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/persistence.js'));
+});
+
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
