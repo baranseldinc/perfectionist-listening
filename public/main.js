@@ -79,12 +79,12 @@ function getReqParam(name) {
 function copyCode() {
     const origin = document.location.origin + '?srcLink=';
     const code = `let yesButton = document.querySelector('button[name=YES]');\
-    if(yesButton) yesButton.click();\
-    var all = document.querySelectorAll('audio');\
+    if(yesButton) {yesButton.click();setTimeout(start,3000);} else {start()}\
+    function start() {var all = document.querySelectorAll('audio');\
     var audio = Array.from(all).filter(item => item.currentSrc)[0];\
     var src = audio.currentSrc;\
     audio.pause();\
-    window.open('${origin}' + src);`;
+    window.open('${origin}' + src);}`;
     async function copyOperation(text) {
         await navigator.clipboard.writeText(text)
         alert('Kopyalandı. Dersin ses kaydını açtığınız ekranda konsola yapıştırıp enter\'layın!')
