@@ -43,7 +43,8 @@ if (srcLink) {
             document.querySelector('textarea').value = notes;
         }
 
-        showMessage('Ready!')
+        showMessage('Ready!');
+        audio.play();
         timer = setInterval(main, 2000);
     }, () => {
         showMessage('Video akışı sağlanamadı. Lütfen ders bağlantısını google drive üzerinden yeniden açın ve konsoldan kodu çalıştırın.');
@@ -78,7 +79,9 @@ function getReqParam(name) {
 function copyCode() {
     const origin = document.location.origin + '?srcLink=';
     const code = `var all = document.querySelectorAll('audio');\
-    var src = Array.from(all).filter(item => item.currentSrc)[0].currentSrc;\
+    var audio = Array.from(all).filter(item => item.currentSrc)[0]\
+    var src = audio.currentSrc;\
+    audio.pause();\
     window.open('${origin}' + src);`;
     async function copyOperation(text) {
         await navigator.clipboard.writeText(text)
