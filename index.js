@@ -13,5 +13,13 @@ app.get('/main.js', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/main.js'));
 });
 
+app.get('/survey.html', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/survey.html'));
+});
+
+app.get('/survey.js', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/survey.js'));
+});
+
 app.listen(port);
 console.log('Server started at http://localhost:' + port);

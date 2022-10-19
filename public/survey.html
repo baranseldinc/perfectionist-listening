@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfectionist 194. Dönem Salı 19.00 Grubu</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <style>
+        body {
+            padding: 16px;
+        }
+
+        .main-wrapper {
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .availability-status {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .day-box:hover {
+            background-color: #9f93228f;
+            transition: 0.5s;
+        }
+
+        .hour-box {
+            width: calc(82vw/7);
+            height: calc(82vh/12);
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            border-right: 3px solid;
+            border-left: 3px solid;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .hour-box:hover {
+            background-color: #9f93228f;
+        }
+
+        .bg-selected {
+            background-color: #9f9322d6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <h3>Perfectionist 194. Dönem Salı 19.00 Grubu</h3>
+        <p class="text-muted">Herkese uygun bir saati en demokratik ve teknolojik çözümlerle
+            yakalamaya çalışıyoruz. (availability-status)</p>
+
+        <h6>Uygunluk Durumu</h6>
+        <div class="availability-status">
+            <div class="day-box" data-value="pazartesi">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+            <div class="day-box" data-value="sali">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+            <div class="day-box" data-value="carsamba">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+            <div class="day-box" data-value="persembe">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+            <div class="day-box" data-value="cuma">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+            <div class="day-box" data-value="cumartesi">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+            <div class="day-box" data-value="pazar">
+                <div class="hour-box" data-value="11.00"></div>
+                <div class="hour-box" data-value="12.00"></div>
+                <div class="hour-box" data-value="13.00"></div>
+                <div class="hour-box" data-value="14.00"></div>
+                <div class="hour-box" data-value="15.00"></div>
+                <div class="hour-box" data-value="16.00"></div>
+                <div class="hour-box" data-value="17.00"></div>
+                <div class="hour-box" data-value="18.00"></div>
+                <div class="hour-box" data-value="19.00"></div>
+                <div class="hour-box" data-value="20.00"></div>
+                <div class="hour-box" data-value="21.00"></div>
+            </div>
+        </div>
+    </div>
+    <script src="survey.js"></script>
+</body>
+
+</html>
