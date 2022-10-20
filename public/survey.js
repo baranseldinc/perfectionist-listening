@@ -65,7 +65,7 @@ function renderTable() {
 
 function kaydet() {
     if (username) {
-        window.persistence.updateUserResponse(username, selectedHours, () => {
+        window.persistence.insertResponse(username, selectedHours, () => {
             alert('Başarıyla güncellendi..!');
         }, err => {
             alert('HATA: güncelleme işlemi başarısız!');
