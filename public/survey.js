@@ -37,7 +37,6 @@ const username = localStorage.getItem('username');
 
 setTimeout(() => {
     if (username) {
-        document.getElementById('showResults').style.display = "block";
         window.persistence.getUserData(username, data => {
             window.userData = data;
             selectedHours = data.response;
