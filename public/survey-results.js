@@ -70,7 +70,7 @@ function renderTable(maxLength) {
 
         const maxDiff = (maxLength < 1 ? 1 : maxLength) - 1;
         const base = 0;
-        const step = Math.floor((255 - base) / 9);
+        const step = Math.floor((255 - base) / maxLength);
         let decimal = (votedUsersArray.length * step + base);
         if (decimal > 254)
             decimal = 254;
