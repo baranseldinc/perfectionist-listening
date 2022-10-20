@@ -21,6 +21,14 @@ app.get('/survey.js', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/survey.js'));
 });
 
+app.get('/survey.html', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/survey-results.html'));
+});
+
+app.get('/survey.js', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/survey-results.js'));
+});
+
 app.get('/persistence.js', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/persistence.js'));
 });

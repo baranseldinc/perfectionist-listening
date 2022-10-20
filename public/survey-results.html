@@ -23,7 +23,7 @@
         }
 
         .availability-table {
-            display: flex;
+            display: none;
             flex-direction: row;
         }
 
@@ -67,10 +67,6 @@
             cursor: pointer;
         }
 
-        .results-wrapper {
-            display: none;
-        }
-
         #showResults {
             display: none;
         }
@@ -81,14 +77,11 @@
     <b id="user-info" onclick="deleteMe()"></b>
     <div class="table-wrapper">
         <h3>Perfectionist 194. Dönem Salı 19.00 Grubu</h3>
-        <p class="text-muted">Herkese uygun bir saati en demokratik ve teknolojik çözümlerle
-            yakalamaya çalışıyoruz. Hafta boyunca uygunluğunuz bulunan tüm saatleri seçin lütfen. (availability-status)</p>
+        <p class="text-muted">Oylama sonuçları</p>
 
 
         <div class="availability-table-header">
-            <h6>Uygunluk Tablosu</h6>
-            <a href="./survey-results.html">Sonuçları Gör</a>
-            <button class="btn btn-success btn-sm" onclick="kaydet()">Kaydet</button>
+            <a href="./survey.html">Önceki sayfaya dön</a>
         </div>
         <div class="availability-table">
             <div class="day-box" data-value="pazartesi">
@@ -184,11 +177,8 @@
             </div>
         </div>
     </div>
-    <div class="results-wrapper">
-        Result Section
-    </div>
     <script src="persistence.js" type="module"></script>
-    <script src="survey.js"></script>
+    <script src="survey-results.js"></script>
 </body>
 
 </html>
