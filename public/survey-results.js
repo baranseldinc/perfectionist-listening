@@ -71,8 +71,10 @@ function renderTable(maxLength) {
         const maxDiff = (maxLength < 1 ? 1 : maxLength) - 1;
         const base = 0;
         const step = Math.floor((255 - base) / 9);
-
-        const hexCode = (votedUsersArray.length * step + base).toString(16);
+        let decimal = (votedUsersArray.length * step + base);
+        if (decimal > 254)
+            decimal = 254;
+        const hexCode = (decimal).toString(16);
         element.style.backgroundColor = '#9f9322' + hexCode;
     }
 }
