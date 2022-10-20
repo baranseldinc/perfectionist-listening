@@ -21,11 +21,11 @@ app.get('/survey.js', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/survey.js'));
 });
 
-app.get('/survey.html', function (req, res) {
+app.get('/survey-results.html', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/survey-results.html'));
 });
 
-app.get('/survey.js', function (req, res) {
+app.get('/survey-results.js', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/survey-results.js'));
 });
 
