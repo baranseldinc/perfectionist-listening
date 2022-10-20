@@ -64,3 +64,16 @@ window.persistence.insertResponse = function (username, response, successCallbac
         errorCallback(e);
     });
 }
+
+window.persistence.updateResponse = function (username, response, successCallback, errorCallback) {
+    localStorage.setItem('username', username);
+    set(ref(database, 'availablities/' + username), {
+        response: response,
+        total_update: window.userData.total_update + 1,
+        last_update: new Date().toISOString()
+    }).then(() => {
+        successCallback();
+    }).catch(e => {
+        errorCallback(e);
+    });
+}

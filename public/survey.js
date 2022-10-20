@@ -65,7 +65,7 @@ function renderTable() {
 
 function kaydet() {
     if (username) {
-        window.persistence.insertResponse(username, selectedHours, () => {
+        window.persistence.updateResponse(username, selectedHours, () => {
             alert('Başarıyla güncellendi..!');
         }, err => {
             alert('HATA: güncelleme işlemi başarısız!');
@@ -89,5 +89,13 @@ function kaydet() {
                 return;
             }
         })
+    }
+}
+
+function deleteMe() {
+    if (confirm('Benim kaydımı sil!')) {
+        alert('HOŞÇAKAL  :(');
+        localStorage.removeItem('username');
+        document.location.reload();
     }
 }
