@@ -19,7 +19,11 @@ Array.from(allHours).forEach(hour => {
     <span>${value}</span>`;
 
     hour.addEventListener('click', e => {
-        console.log('dsa')
+        let text = '';
+        hoursResults[parentValue + '#' + value].forEach(item => {
+            text += " - " + item + "\n";
+        })
+        alert(text);
     });
 })
 const username = localStorage.getItem('username');
@@ -29,7 +33,7 @@ if (username) {
         main();
     }, 2000);
 } else {
-    document.writeln('Bu sayfayı görme yetkiniz bulunmamaktadır.')
+    document.writeln('Bu sayfayı (oy kullanmadığınız için) görme yetkiniz bulunmamaktadır. ')
 }
 
 function main() {
