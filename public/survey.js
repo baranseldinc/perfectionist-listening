@@ -80,6 +80,7 @@ function kaydet() {
             if (success) {
                 window.persistence.insertResponse(xusername, selectedHours, () => {
                     alert('Cevaplarınız başarıyla kaydedildi');
+                    document.location.reload();
                 }, () => {
                     alert('HATA: kaydetme işlemi başarısız');
                     console.log(err);
@@ -94,8 +95,8 @@ function kaydet() {
 
 function deleteMe() {
     if (confirm('Benim kaydımı sil!')) {
+        window.persistence.deleteMe();
         alert('HOŞÇAKAL  :(');
-        localStorage.removeItem('username');
         document.location.reload();
     }
 }

@@ -56,7 +56,7 @@ window.persistence.insertResponse = function (username, response, successCallbac
     localStorage.setItem('username', username);
     set(ref(database, 'availablities/' + username), {
         response: response,
-        total_update: 0,
+        total_update: 1,
         last_update: new Date().toISOString()
     }).then(() => {
         successCallback();
@@ -75,5 +75,13 @@ window.persistence.updateResponse = function (username, response, successCallbac
         successCallback();
     }).catch(e => {
         errorCallback(e);
+    });
+}
+
+window.persistence.deleteMe = function () {
+    localStorage.removeItem('username');
+    set(ref(database, 'availablities/' + username), {
+        ...window.userData,
+        is_deleted: 1
     });
 }
