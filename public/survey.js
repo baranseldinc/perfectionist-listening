@@ -79,7 +79,7 @@ function kaydet() {
         window.persistence.checkUserName(xusername, success => {
             if (success) {
                 window.persistence.insertResponse(xusername, selectedHours, () => {
-                    alert('Cevaplarınız başarıyla kaydedildi');
+                    alert('Girişleriniz başarıyla kaydedildi');
                     document.location.reload();
                 }, () => {
                     alert('HATA: kaydetme işlemi başarısız');
